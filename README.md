@@ -1,7 +1,34 @@
 # MSBA (Multi-source Bug assignment)
+
 This project includes the experiments for multi-source bug assignment (using Github data sets).
 
 The bug assignment is based on expertise scores of the developers. The scores are obtained by calculating the similarity between the new bug and each developer. Our similarity metric is based on IR method, TF-IDF, and takes into account time and importance of the used keywords as well as the context of the usage (e.g., the text of a commit, a pull request comment or a previously fixed bug). 
+
+All the MSBA experiment requirements (data set, code, etc.) are available here.
+The data set for 13 popular Github projects including:
+- 7,438 developers
+- 64,474 bug reports
+- 93,016 bug-assignments
+- 281,336 commits
+- 80,803 pull requests
+- 351,940 bug comments
+- 30,155 commit comments
+- 298,579 pull request comments
+
+In addition, there is another data set for multi-project experiment (using evidence of expertise from sub-projects to assign bugs in the parent project) including two popular projects (angular/angular.js and rails/rails) and their 6 and 13 sub-projects:
+- 2,574 developers (as sub-project members)
+- 11,952 bug reports
+- 17,426 bug-assignments
+- 17,352 commits
+- 5,740 pull requests
+- 50,437comments
+- 1,712 commit comments
+- 16,414 pull request comments
+
+
+Here's the data model of our experiments:
+![Alt text](/Schema.png?raw=true "The data model")
+
 
 How to run the code:
 
