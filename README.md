@@ -32,7 +32,7 @@ Here's the data model of our experiments:
 
 How to run the code:
 
-1- Clone the code in C:\BT2. After cloning, in this directory there should be "BugTriaging2" and "Exp" folder. The first one includes the source codes. The second folder includes all the input files and the output files that are results of runnning the code. These are the results we provided in our paper.
+1- Clone the code in C:\\MSBA. After cloning, in this directory there should be "BugTriaging2" and "Exp" folder. The first one includes the source codes. The second folder includes all the input files and the output files that are results of runnning the code. These are the results we provided in our paper.
 
 2- Install Eclipse IDE for Java Developers. The program is tested on Eclipse Neon.3 Release 4.6.3: http://www.eclipse.org/downloads/packages/eclipse-ide-java-developers/neon3 on a 64 bit version with MS Windows 10 OS. However, other releases and even other versions of Eclipse and on different platforms should be fine.
 
