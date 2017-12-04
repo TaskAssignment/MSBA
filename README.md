@@ -32,7 +32,7 @@ Here's the data model of our experiments:
 
 How to run the code:
 
-1- Clone the code in C:\\MSBA. After cloning, in this directory there should be "BugTriaging2" and "Exp" folder. The first one includes the source codes. The second folder includes all the input files and the output files that are results of runnning the code. These are the results we provided in our paper.
+1- Clone the code in the root of your drive "C". It should create the folder "C:\\MSBA" and all its contents. After cloning, in this directory ("C:\\MSBA") there should be "BugTriaging2" and "Exp" folders. The first one includes the source codes. The second folder includes the requirements of the experiments (all the input files and the output files that are results of runnning the code for different configurations). These are the results we provided in our paper.
 
 2- Install Eclipse IDE for Java Developers. The program is tested on Eclipse Neon.3 Release 4.6.3: http://www.eclipse.org/downloads/packages/eclipse-ide-java-developers/neon3 on a 64 bit version with MS Windows 10 OS. However, other releases and even other versions of Eclipse and on different platforms should be fine.
 
@@ -40,7 +40,11 @@ How to run the code:
 
 4- If you are running the code on Linux, you need to change the formatting of the paths in the code (in Constants.java, CSVManipulations.java, CheckFeasibility.java and JSONToTSV.java); change "\\\\" to "//" everywhere.
 
-5- The main file to run is "BugTriaging2C\src\main\Algorithm.java". Note that there are several loops in the main() method of this class. These were used once for tuning and running the "bugAssignment()" method under different configurations. But all of the extra cases are now disabled and the "bugAssignment()" method is executed just once every time we run the code. After running, the output should be created  if the "Out" folder is empty. Otherwise it will add the new results at the end of the contents of the output files. Currently the program is set to  run just T5 (combination of all assignee types). But if you want to run for T1, T2, T3 and T4 separately you can change "0"s to "1"s in "assignmentTypesToTriage" array in main(). Currently, the "isMainRun = false;" statement makes the main() method run the code just for three test projects. If you want to run the code for all the 13 projects, then change false to true.
+5- The main file to run is "BugTriaging2C\src\main\Algorithm.java". Note that there are several loops in the main() method of this class. These were used once for tuning and running the "bugAssignment()" method under different configurations. But all of the extra cases are now disabled and the "bugAssignment()" method is executed just once every time we run the code. After running, the output should be created if the "Out" folder is empty. Otherwise it will add the new results at the end of the contents of the output files. Currently the program is set to  run just T5 (combination of all assignee types). But if you want to run for T1, T2, T3 and T4 assignee types separately you can change "0"s to "1"s in "assignmentTypesToTriage" array in main(). 
+The "runType = RUN_TYPE.RUN_FOR_ALL_PROJECTS" statement makes the experiment() method run the code for all the projects. If you want to run the code for specific projects (like angular and rails and ther sub-projects, or just three test projects), then you can comment this line and un-comment one of the following lines. 
+"runType_SO" contains the status of Stack Overflow data. Currently it is set to "DO_NOT_CONSIDER_SO", but you can comment that line and un-comment one of the following lines.
+"option13_counter" is set to 11 which represents "1011" in binary (COMMIT_COMMENT=1, COMMIT=0, BUG_COMMENT=1. BUG=1). It can be changed to a value from 0 to 15 (representing "0000" to "1111" in binary).
+
 
 6- If you have any problems or issues, you can create an issue in this repository and I will answer to that. Or you can contact "**alisajedi [at] ualberta.ca**" for other questions.
 
