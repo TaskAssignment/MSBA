@@ -1,4 +1,4 @@
-# MSBA (Multi-source Bug assignment)
+# MSBA: Multi-source Bug assignment
 
 This project includes the experiments for multi-source bug assignment (using Github data sets).
 
